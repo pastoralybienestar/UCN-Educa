@@ -72,13 +72,13 @@
         
         /* Accordion transitions */
         .accordion-content {
-            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out;
+            transition: max-height 0.8s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out;
             max-height: 0;
             opacity: 0;
             overflow: hidden;
         }
         .accordion-item.expanded .accordion-content {
-            max-height: 1000px; /* Arbitrary large number */
+            max-height: 6000px; /* Aumentado drásticamente para evitar cortes en contenido interactivo */
             opacity: 1;
         }
     </style>
@@ -524,32 +524,30 @@
                         id: 'c1_l1', 
                         titulo: "Tu Relación con el Dinero", 
                         descripcion: "Descubre tus creencias limitantes y cómo tu mentalidad define tu riqueza.", 
-                        elementos: [
-                            { tipo: 'texto', contenido: "La riqueza no comienza en tu billetera, comienza en tu mente. A menudo crecemos escuchando frases tóxicas sobre el dinero que se instalan en nuestro subconsciente." },
-                            { tipo: 'chat', mensajes: [
-                                { rol: 'mentor', texto: '¡Hola! Imagina que ves a alguien conduciendo un auto súper lujoso por la calle. ¿Qué es lo primero que se te viene a la mente?' },
-                                { rol: 'alumno', texto: 'Sinceramente... pienso: "Seguro hizo algo ilegal" o "Debe ser alguien muy arrogante".' },
-                                { rol: 'mentor', texto: '¡Exacto! Esa es una típica "creencia limitante". Si tu cerebro asocia el dinero con ser malo o ilegal, tu subconsciente te saboteará para que nunca tengas demasiado dinero (porque tú quieres ser una buena persona).' },
-                                { rol: 'mentor', texto: 'El dinero es NEUTRAL. Es solo un amplificador. Si eres generoso, el dinero te permitirá ayudar a miles. Si eres egoísta, te hará más egoísta. Cambia el chip: "El dinero es una herramienta para crear libertad".' }
-                            ]},
-                            { tipo: 'caso_practico', pregunta: "Recibes un bono inesperado en tu trabajo de $1,000. Tienes algunas deudas de tarjeta de crédito. ¿Qué es lo primero que haces?", opciones: [
-                                { texto: "¡Me voy de viaje o compro ropa! Fue dinero extra que no esperaba, me lo merezco.", esCorrecta: false, feedback: "Cuidado con la trampa de la 'gratificación instantánea'. Gastar el dinero extra automáticamente es lo que mantiene a la clase media atrapada en la carrera de la rata." },
-                                { texto: "Tomo el 20% para un pequeño gusto, y el 80% lo inyecto inmediatamente a mi deuda más cara.", esCorrecta: true, feedback: "¡Mentalidad de rico! Sabes equilibrar disfrutar el presente (20%) mientras usas el resto como un 'ejército' para destruir tus pasivos (deudas)." }
-                            ]}
-                        ]
+                        contenido: "La riqueza no comienza en tu billetera, comienza en tu mente. Muchos crecemos escuchando frases como 'el dinero es la raíz de todos los males' o 'los ricos son codiciosos'. Estas creencias subconscientes nos auto-sabotean.\n\n🧠 REPROGRAMA TU MENTE:\n• El dinero es neutral: No es bueno ni malo, es simplemente un amplificador. Si eres una buena persona, el dinero te permitirá hacer más cosas buenas.\n• Abundancia vs Escasez: Deja de pensar en cómo 'sobrevivir' al mes, y empieza a pensar en cómo 'generar' más valor. El pastel de la riqueza se puede expandir, no tienes que quitarle a otros para ganar tú.\n• Págate a ti primero: Es el principio fundamental de la riqueza. Apenas recibas ingresos, separa tu porcentaje de ahorro ANTES de pagar cualquier otra factura. Trátalo como el impuesto más importante: el de tu futuro.",
+                        chat: [
+                            { sender: 'mentor', text: '¡Hola! Imagina que hoy recibes un aumento sorpresa de $500 al mes. Sé honesto, ¿qué es lo primero que piensas hacer con ese dinero extra?' },
+                            { sender: 'user', text: 'Probablemente me mudaría a un apartamento más grande o cambiaría mi auto.' },
+                            { sender: 'mentor', text: 'Esa es la "Trampa del Estilo de Vida" (Inflación del estilo de vida). Cuando tus ingresos suben y tus gastos suben en la misma proporción, nunca serás más rico. El secreto es mantener tus gastos estables y usar ese extra para construir riqueza.' }
+                        ],
+                        casoPractico: {
+                            pregunta: "Recibes un bono navideño inesperado de $1,000. Tienes una deuda de tarjeta de crédito de $500 (al 35% de interés anual) y querías comprar una nueva consola de videojuegos de $500. ¿Qué haces?",
+                            opciones: [
+                                { texto: "Compro la consola y pago $500 a la tarjeta. Vida solo hay una.", correcto: true, feedback: "¡Excelente decisión de equilibrio! Matas la deuda tóxica que te desangraba (35% de interés es criminal) y aún te das un gusto. Aunque lo óptimo sería invertir los otros $500, esta es una decisión realista y sana." },
+                                { texto: "Pago el mínimo de la tarjeta ($50) e invierto los $950.", correcto: false, feedback: "¡Cuidado! Ninguna inversión segura te dará un 35% de rendimiento garantizado. Es matemáticamente un error invertir mientras mantienes deudas de alto interés. La deuda se comerá tus ganancias." },
+                                { texto: "Compro la consola y ropa por $1,000. El bono es para gastarlo.", correcto: false, feedback: "Este es un comportamiento de mentalidad de escasez. Tratar el dinero inesperado como 'dinero gratis para gastar' garantiza que nunca acumules capital." }
+                            ]
+                        }
                     },
                     { 
                         id: 'c1_l2', 
                         titulo: "El Presupuesto 50/30/20", 
                         descripcion: "La regla de oro para no llegar a fin de mes en ceros y saber a dónde va tu dinero.", 
-                        elementos: [
-                            { tipo: 'texto', contenido: "El error más común es ahorrar 'lo que sobra' a fin de mes. Alerta spoiler: nunca sobra nada. La regla 50/30/20 te da un mapa." },
-                            { tipo: 'ejemplo', contenido: "<strong>Si ganas $2,000 al mes, tu mapa ideal sería:</strong><br/>• <strong>$1,000 (50%):</strong> Supervivencia (Alquiler, comida básica, servicios, transporte).<br/>• <strong>$600 (30%):</strong> Calidad de vida (Salidas, Netflix, hobbies, ropa).<br/>• <strong>$400 (20%):</strong> Tu futuro (Ahorro, inversión, pago extra de deudas)." },
-                            { tipo: 'caso_practico', pregunta: "Haces tus cuentas y descubres que el alquiler y la comida básica consumen el 70% de tus ingresos. ¿Qué significa esto?", opciones: [
-                                { texto: "Que la regla 50/30/20 no funciona en mi país y debo ahorrar solo el 5%.", esCorrecta: false, feedback: "Justificar una mala situación no la resuelve. Si reduces tu ahorro, estás sacrificando tu yo del futuro para sobrevivir hoy." },
-                                { texto: "Que mi 'Estilo de vida base' es demasiado caro para mi nivel de ingresos actual.", esCorrecta: true, feedback: "¡Correcto! Tienes dos opciones matemáticas: O reduces drásticamente tus gastos fijos (mudarte a un lugar más barato), o buscas la manera de aumentar tus ingresos mensuales." }
-                            ]}
-                        ]
+                        contenido: "El error más común es ahorrar lo que sobra después de gastar. La regla 50/30/20 cambia la fórmula y te da un mapa claro:\n\n• 50% NECESIDADES BÁSICAS: Vivienda, servicios, supermercado básico, transporte y seguros. (Si superas este %, debes reducir tu estilo de vida o buscar ganar más).\n• 30% DESEOS Y ESTILO DE VIDA: Restaurantes, hobbies, Netflix, viajes, compras personales. ¡La educación financiera no significa dejar de vivir!\n• 20% AHORRO E INVERSIÓN: Pago de deudas agresivo (por encima del mínimo), fondo de emergencia e inversiones para tu retiro.\n\n💡 TIP: Automatiza tus finanzas. Configura transferencias automáticas para que tu 20% se mueva a otra cuenta el mismo día que recibes tu salario.",
+                        ejemplo: {
+                            titulo: "Ejemplo Práctico con un salario de $2,000",
+                            contenido: "💰 <b>$1,000 (50%)</b> para Alquiler, comida en casa, luz, agua y transporte.<br>🍕 <b>$600 (30%)</b> para Salir con amigos, ropa, gimnasio y suscripciones.<br>📈 <b>$400 (20%)</b> directos a tu fondo de emergencia o portafolio de inversión.<br><br><i>Nota: Si tu alquiler solo ya cuesta $900, estás viviendo por encima de tus posibilidades estructurales.</i>"
+                        }
                     }
                 ]
             },
@@ -563,36 +561,32 @@
                         id: 'c2_l1', 
                         titulo: "Deuda Buena vs. Deuda Mala", 
                         descripcion: "No todos los créditos son malos. Aprende a usar el dinero del banco a tu favor.", 
-                        elementos: [
-                            { tipo: 'texto', contenido: "La sociedad nos enseña a tenerle terror a los bancos o, peor aún, a usar sus créditos para comprarnos televisores gigantes. Conoce la diferencia clave:" },
-                            { tipo: 'chat', mensajes: [
-                                { rol: 'alumno', texto: 'Mentor, ¿entonces nunca debo pedir un préstamo?' },
-                                { rol: 'mentor', texto: 'Falso. Los millonarios usan la deuda todo el tiempo. Pero usan "Deuda Buena".' },
-                                { rol: 'mentor', texto: 'DEUDA MALA: Usar la tarjeta para comprar ropa a 12 meses. Estás pagando intereses por algo que pierde valor apenas sales de la tienda. Literalmente te empobreces doble.' },
-                                { rol: 'mentor', texto: 'DEUDA BUENA: Sacar un crédito al 10% anual para comprar una máquina para tu negocio que te hará ganar un 30% anual extra. ¡El banco está financiando tu crecimiento!' }
-                            ]},
-                            { tipo: 'caso_practico', pregunta: "Carlos es diseñador freelance y su computadora vieja no rinde. Saca un crédito de $2,000 para comprar una Mac de última generación para editar más rápido y tomar más clientes. ¿Qué tipo de deuda es?", opciones: [
-                                { texto: "Deuda Mala. Nunca debes endeudarte por computadoras o tecnología porque se deprecian rápido.", esCorrecta: false, feedback: "Aunque la tecnología se deprecia, en este caso NO es un gasto de consumo, es una herramienta de producción." },
-                                { texto: "Deuda Buena. Es una herramienta de trabajo (Activo) que le permitirá generar más dinero del que le cuesta el crédito.", esCorrecta: true, feedback: "¡Exacto! El crédito le genera un Retorno de Inversión (ROI) positivo al permitirle acelerar sus ingresos profesionales." }
-                            ]}
-                        ]
+                        contenido: "La sociedad y las escuelas nos enseñan a tenerle miedo a la deuda o a usarla solo para el consumo.\n\n❌ DEUDA MALA (El ancla): Usar dinero prestado a altas tasas de interés para comprar cosas que PIERDEN valor o se consumen. Ejemplos: Sacar un televisor a 24 cuotas, diferir el mercado mensual, comprar ropa a crédito.\n\n✅ DEUDA BUENA (El apalancamiento): Usar el dinero del banco para comprar ACTIVOS que generarán más dinero del que te cuesta el interés del préstamo. Ejemplos: Un crédito para iniciar un negocio validado, comprar una máquina para tu emprendimiento, o deuda hipotecaria para una propiedad que vas a rentar.",
+                        casoPractico: {
+                            pregunta: "Estás evaluando solicitar un crédito personal. ¿Cuál de estos escenarios representa usar una 'Deuda Buena'?",
+                            opciones: [
+                                { texto: "Pedir $5,000 para unas vacaciones inolvidables en Europa.", correcto: false, feedback: "Incorrecto. Las experiencias son maravillosas, pero financiarlas con deuda te obligará a pagar esas vacaciones durante años. Si quieres viajar, debes ahorrar para ello, no pedir prestado." },
+                                { texto: "Pedir $5,000 para comprar maquinaria que aumentará la producción de tu negocio en un 30%.", correcto: true, feedback: "¡Exacto! El crédito te costará dinero (intereses), pero el aumento de producción generará más ingresos que el costo de la cuota mensual. El banco está financiando tu crecimiento." },
+                                { texto: "Pedir $5,000 para cambiar tu auto que funciona bien por uno del año.", correcto: false, feedback: "Es deuda mala. El auto nuevo perderá un 20% de su valor apenas salga del concesionario, y tú estarás pagando intereses sobre un objeto que cada día vale menos." }
+                            ]
+                        }
                     },
                     { 
                         id: 'c2_l2', 
                         titulo: "Hackeando la Tarjeta de Crédito", 
                         descripcion: "Cómo usar los plásticos para ganar beneficios sin pagar un solo centavo de interés.", 
-                        elementos: [
-                            { tipo: 'texto', contenido: "Las tarjetas de crédito son el mejor instrumento financiero si conoces las 2 reglas inquebrantables: 1. Sé Totalero (paga todo el saldo, no el mínimo) y 2. Paga a una sola cuota." },
-                            { tipo: 'caso_practico', pregunta: "Llega tu estado de cuenta. Tienes un 'Pago Mínimo' de $30 y un 'Pago para no generar intereses' (Saldo total) de $500. ¿Qué pagas?", opciones: [
-                                { texto: "Pago $50 para estar por encima del mínimo, y el resto el próximo mes.", esCorrecta: false, feedback: "¡Error fatal! Acabas de activar la trampa de los intereses. El banco te cobrará intereses altísimos sobre los $450 restantes, que se sumarán a tu deuda del próximo mes." },
-                                { texto: "Pago los $500 completos.", esCorrecta: true, feedback: "¡Perfecto! Eres un 'Totalero'. Al banco no le gusta esto porque no gana dinero contigo en intereses, pero tú disfrutas del mes de financiamiento gratis y sumas puntos/millas." }
-                            ]}
+                        contenido: "Las tarjetas de crédito son como sierras eléctricas: excelentes herramientas si sabes usarlas, pero pueden amputarte un brazo si juegas con ellas.\n\n💳 CÓMO GANARLE AL BANCO:\n1. Sé un 'Totalero': Nunca pagues el pago mínimo. Paga SIEMPRE el saldo total de tu deuda antes de la fecha límite. Así, tu interés será exactamente de $0.\n2. Todo a 1 sola cuota: Si usas la tarjeta para tus compras diarias (supermercado, gasolina), difiérelas a 1 sola cuota.\n3. Aprovecha los beneficios: Si sigues las dos reglas anteriores, el banco literalmente te estará regalando dinero a través de Cashback, Millas para viajar y seguros gratuitos para tus compras y viajes.",
+                        chat: [
+                            { sender: 'user', text: 'Me da miedo tener una tarjeta de crédito, siento que me voy a endeudar.' },
+                            { sender: 'mentor', text: 'El miedo es natural, pero la tarjeta no es dinero extra, es solo un "puente" temporal. La regla de oro es: NUNCA compres algo con la tarjeta si no tienes el efectivo en tu cuenta bancaria para pagarlo hoy mismo.' },
+                            { sender: 'user', text: '¿Y por qué no uso simplemente mi tarjeta de débito y ya?' },
+                            { sender: 'mentor', text: 'Por dos razones: 1) Seguridad: Si te clonan la débito, roban TU dinero. Si te clonan la crédito, roban dinero del banco mientras lo resuelves. 2) Recompensas: El débito no te da cashback ni millas por hacer las mismas compras de supermercado.' }
                         ]
                     }
                 ]
             },
             {
-                categoria: "Módulo 3: El Arte de Acumular",
+                categoria: "Módulo 3: El Arte del Ahorro",
                 iconoStr: '<i data-lucide="piggy-bank" class="w-7 h-7 text-amber-500"></i>',
                 color: "text-amber-700",
                 bgGradient: "from-amber-50 to-yellow-50",
@@ -600,19 +594,31 @@
                     { 
                         id: 'c3_l1', 
                         titulo: "La Inflación: El Ladrón Invisible", 
-                        descripcion: "¿Por qué ahorrar tu dinero bajo el colchón o en cuentas normales te empobrece?", 
-                        elementos: [
-                            { tipo: 'ejemplo', contenido: "<strong>El Poder Destructivo de la Inflación:</strong><br/>Imagina que en el año 2000, con $100 llenabas el carrito del supermercado. Si guardaste otros $100 bajo el colchón durante 24 años, hoy sigues teniendo el billete de $100... pero apenas te alcanza para 3 o 4 productos. <strong>Perdiste tu dinero sin gastar un centavo.</strong>" },
-                            { tipo: 'caso_practico', pregunta: "Has ahorrado con mucho esfuerzo $5,000 para tu Fondo de Emergencia. ¿Dónde deberías guardarlo?", opciones: [
-                                { texto: "En mi cuenta bancaria de nómina normal o en efectivo para tenerlo listo por si acaso.", esCorrecta: false, feedback: "El efectivo o las cuentas de nómina pagan 0% de interés. Cada año que pase, tu fondo valdrá un 5-8% menos por culpa de la inflación." },
-                                { texto: "En una Cuenta de Ahorro de Alto Rendimiento o Fondo Líquido de muy bajo riesgo.", esCorrecta: true, feedback: "¡Excelente decisión! Tu dinero está seguro y disponible rápidamente en caso de emergencia, pero además genera rendimientos (ej. 8% anual) que protegen su valor contra la inflación." }
-                            ]}
-                        ]
+                        descripcion: "¿Por qué ahorrar tu dinero en una cuenta normal te empobrece cada año?", 
+                        contenido: "La inflación es el aumento constante del costo de las cosas. Básicamente, hace que tu dinero valga menos con el tiempo.\n\n💸 EL PELIGRO DEL COLCHÓN:\nSi guardas $1,000 en efectivo hoy, y la inflación es del 5% anual, en un año seguirás teniendo un billete de $1,000, pero solo podrás comprar el equivalente a $950 en bienes. Has perdido poder adquisitivo sin darte cuenta.\n\n🛡️ LA DEFENSA:\nEl ahorro estático es perder a paso lento. Tu dinero de emergencia y ahorros a corto plazo deben estar en 'Cuentas Remuneradas' o de Alto Rendimiento que te paguen una tasa similar a la inflación. Tu dinero a largo plazo DEBE ser invertido.",
+                        ejemplo: {
+                            titulo: "El caso de la Hamburguesa",
+                            contenido: "En el año 2000, un combo de hamburguesa costaba aproximadamente $4.00. Hoy, ese mismo combo exacto cuesta alrededor de $9.00.<br><br>Si hubieras guardado $4.00 en una alcancía hace 20 años esperando comprarte un combo hoy, te llevarías una triste sorpresa. ¡Tu billete es el mismo, pero el mundo cambió! Por eso debes hacer que tu dinero crezca al mismo ritmo que los precios."
+                        }
+                    },
+                    { 
+                        id: 'c3_l2', 
+                        titulo: "Identificando Fugas de Dinero", 
+                        descripcion: "Gastos hormiga, vampiro y fantasma que desangran tu presupuesto mensual.", 
+                        contenido: "No te empobreces por comprarte un café, te empobreces por no ser consciente de la sumatoria de tus hábitos diarios.\n\n🐜 GASTOS HORMIGA:\nPequeñas compras diarias (cafés, snacks, cajetillas de cigarros, Uber por pereza). Si sumas $5 diarios, son $1,800 al año que podrías haber invertido.\n\n🦇 GASTOS VAMPIRO:\nAquellos que te chupan la sangre mensualmente y ya ni los usas. Suscripciones al gimnasio al que no vas, canales de streaming repetidos, garantías extendidas innecesarias.\n\n💡 SOLUCIÓN: Revisa el extracto de tu tarjeta los últimos 3 meses con un marcador rojo y cancela sin piedad todo lo que no uses regularmente.",
+                        casoPractico: {
+                            pregunta: "Estás haciendo tu limpieza financiera mensual. ¿Cuál de los siguientes es el peor 'Gasto Vampiro' que debes atacar inmediatamente?",
+                            opciones: [
+                                { texto: "Comprar un café de $3 camino al trabajo dos veces por semana.", correcto: false, feedback: "Aunque es un gasto hormiga que podrías reducir, no es un vampiro oculto. Eres consciente de ello y lo disfrutas en el momento." },
+                                { texto: "La suscripción mensual de $15 a una app de meditación que no abres hace 6 meses.", correcto: true, feedback: "¡Exactamente! Los gastos vampiro son los más peligrosos porque son automáticos. Estás pagando $180 al año por absolutamente CERO valor a cambio. ¡Cancélalo ya!" },
+                                { texto: "La factura mensual de la electricidad que subió $10 este mes.", correcto: false, feedback: "Esto es una fluctuación normal de tus gastos fijos (necesidades). Aunque debes cuidar la luz, no es un servicio inútil que debas cancelar." }
+                            ]
+                        }
                     }
                 ]
             },
             {
-                categoria: "Módulo 4: Invirtiendo (Nivel 1)",
+                categoria: "Módulo 4: Construcción de Riqueza",
                 iconoStr: '<i data-lucide="sparkles" class="w-7 h-7 text-indigo-500"></i>',
                 color: "text-indigo-700",
                 bgGradient: "from-indigo-50 to-blue-50",
@@ -620,18 +626,23 @@
                     { 
                         id: 'c4_l1', 
                         titulo: "Activos vs. Pasivos", 
-                        descripcion: "El concepto de Robert Kiyosaki que separa a los ricos de la clase media.", 
-                        elementos: [
-                            { tipo: 'chat', mensajes: [
-                                { rol: 'mentor', texto: 'Aquí está el secreto de la riqueza en una frase: Los ricos compran activos, los pobres gastan, y la clase media compra pasivos creyendo que son activos.' },
-                                { rol: 'alumno', texto: 'Suena bien, pero ¿qué significa exactamente?' },
-                                { rol: 'mentor', texto: 'Un ACTIVO mete dinero en tu bolsillo cada mes, incluso si tú no trabajas (Ej. una casa que alquilas a alguien, acciones que pagan dividendos).' },
-                                { rol: 'mentor', texto: 'Un PASIVO saca dinero de tu bolsillo cada mes (Ej. tu auto personal: pagas gasolina, seguro, mantenimiento, y además pierde valor cada año).' }
-                            ]},
-                            { tipo: 'caso_practico', pregunta: "Decides comprar una casa propia, con un crédito hipotecario a 30 años, en la cual vas a vivir con tu familia. ¿Es un Activo o un Pasivo?", opciones: [
-                                { texto: "¡Es un Activo! Los bienes raíces siempre son una inversión segura.", esCorrecta: false, feedback: "Esta es la mayor trampa de la clase media. Si tú vives en ella, NO te está pagando dinero mensual, de hecho, SACA dinero de tu bolsillo (hipoteca, impuestos, reparaciones). Financieramente, tu casa personal es un Pasivo (aunque necesario para vivir)." },
-                                { texto: "Financieramente, es un Pasivo.", esCorrecta: true, feedback: "¡Mente brillante! Como saca dinero de tu bolsillo todos los meses (hipoteca, reparaciones), es un pasivo. Sólo se convertiría en activo si la alquilas y el alquiler cubre la cuota del banco y te sobra dinero." }
-                            ]}
+                        descripcion: "El concepto de Kiyosaki que separa a los ricos de la clase media.", 
+                        contenido: "El secreto de la riqueza se resume en saber distinguir y acumular el tipo correcto de cosas.\n\n📉 PASIVOS (Sacan dinero de tu bolsillo):\nCosas que te generan gastos mes a mes o que pierden su valor rápidamente. Ejemplos: Un auto financiado (paga seguro, gasolina, se devalúa), el último iPhone, ropa de diseñador.\n\n📈 ACTIVOS (Ponen dinero en tu bolsillo):\nCosas que trabajan para ti y te generan ingresos sin tu esfuerzo directo. Ejemplos: Acciones que pagan dividendos, un negocio automatizado, derechos de autor, propiedades inmobiliarias que alquilas a otros.\n\n🎯 EL JUEGO: Compra tantos Activos como puedas, hasta que el dinero que estos generen sea suficiente para pagar los Pasivos de tu estilo de vida.",
+                        ejemplo: {
+                            titulo: "¿Tu casa es un Activo o un Pasivo?",
+                            contenido: "Según la contabilidad tradicional, tu casa es un Activo. Pero según la Inteligencia Financiera: <b>Es un Pasivo.</b><br><br>¿Por qué? Porque saca dinero de tu bolsillo todos los meses (impuestos, mantenimiento, seguros, hipoteca). Solo se convierte en un Activo si decides alquilar una habitación o si compras una segunda casa para rentarla y el inquilino paga la cuota por ti dejándote una ganancia mensual."
+                        }
+                    },
+                    { 
+                        id: 'c4_l2', 
+                        titulo: "La Magia del Interés Compuesto", 
+                        descripcion: "La octava maravilla del mundo: Intereses sobre los intereses.", 
+                        contenido: "Albert Einstein supuestamente dijo que el interés compuesto es la fuerza más poderosa del universo. Es lo que hace que tu dinero crezca de forma exponencial, no lineal.\n\n🔄 CÓMO FUNCIONA:\nImagina que inviertes $1,000 al 10% anual. El primer año ganas $100. Tienes $1,100.\nEl segundo año, no ganas el 10% sobre $1,000, sino sobre $1,100 (ganas $110). Tienes $1,210.\n\nEl crecimiento parece lento al principio, pero en la década 2 y 3, la curva se dispara hacia arriba brutalmente. Por eso, el factor más importante en las inversiones no es cuánto dinero tienes, sino CUÁNTO TIEMPO lo dejas crecer. ¡Empieza hoy!",
+                        chat: [
+                            { sender: 'user', text: 'Siento que ya es muy tarde para mí, tengo 35 años y no he empezado a invertir.' },
+                            { sender: 'mentor', text: 'El mejor momento para plantar un árbol fue hace 20 años. El segundo mejor momento es HOY.' },
+                            { sender: 'user', text: 'Pero solo puedo ahorrar $50 al mes...' },
+                            { sender: 'mentor', text: 'No subestimes el tiempo. Si inviertes $50 mensuales en un índice como el S&P500 (aprox. 10% anual) durante 30 años, aportarás $18,000 de tu bolsillo, ¡pero tendrás más de $113,000! Tu dinero trabajó más duro que tú.' }
                         ]
                     }
                 ]
@@ -758,7 +769,6 @@
 
         // --- ACADEMIA ---
         let expandedModule = 'c1_l1';
-        
         function renderAcademia() {
             const container = document.getElementById('academia-container');
             container.innerHTML = '';
@@ -780,92 +790,106 @@
                     <div class="px-2 md:px-4 py-4 space-y-4">
                 `;
 
-                // Lecciones Dinámicas con Interactividad
+                // Lecciones
                 modulo.lecciones.forEach((leccion) => {
                     const isExpanded = expandedModule === leccion.id;
                     
-                    // Renderizar los elementos de la lección basados en su tipo
-                    const contenidoFormateado = leccion.elementos.map((el, index) => {
-                        if (el.tipo === 'texto') {
-                            return `<p class="mb-4 text-slate-600 font-medium leading-relaxed">${el.contenido}</p>`;
-                        } 
-                        else if (el.tipo === 'ejemplo') {
-                            return `
-                                <div class="bg-indigo-50/50 border border-indigo-100 p-5 rounded-2xl mb-6 shadow-sm">
-                                    <div class="flex items-center text-indigo-700 font-black mb-3">
-                                        <i data-lucide="lightbulb" class="w-5 h-5 mr-2"></i> Ejemplo Práctico
-                                    </div>
-                                    <p class="text-indigo-900/80 text-[15px] leading-relaxed">${el.contenido}</p>
-                                </div>
-                            `;
+                    // Format content (Teoría base)
+                    const contenidoFormateado = leccion.contenido.split('\n').map(paragraph => {
+                        if (!paragraph) return '';
+                        if (paragraph.startsWith('•') || paragraph.startsWith('1.') || paragraph.startsWith('2.') || paragraph.startsWith('3.')) {
+                            return `<p class="pl-4 border-l-4 border-indigo-200 py-1 my-2 bg-slate-50/50 rounded-r-lg">${paragraph}</p>`;
+                        } else if (paragraph.includes(':') && paragraph.length < 50) {
+                            return `<h5 class="font-black text-slate-800 mt-6 mb-2 text-lg">${paragraph}</h5>`;
+                        } else {
+                            return `<p class="mb-4">${paragraph}</p>`;
                         }
-                        else if (el.tipo === 'chat') {
-                            let chatHTML = '<div class="bg-slate-50 border border-slate-100 rounded-3xl p-4 md:p-6 mb-6 space-y-4">';
-                            el.mensajes.forEach(msg => {
-                                if(msg.rol === 'mentor') {
-                                    chatHTML += `
-                                        <div class="flex items-start gap-3 w-[95%] md:w-[85%] animate-fade-in-up">
-                                            <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0 mt-1 shadow-md shadow-indigo-600/30 text-white">
-                                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-                                            </div>
-                                            <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none shadow-sm text-slate-700 font-medium text-[15px] leading-relaxed">
-                                                ${msg.texto}
-                                            </div>
-                                        </div>
-                                    `;
-                                } else {
-                                    chatHTML += `
-                                        <div class="flex items-start justify-end gap-3 w-[95%] md:w-[85%] ml-auto animate-fade-in-up">
-                                            <div class="bg-gradient-to-br from-indigo-500 to-violet-600 text-white p-4 rounded-2xl rounded-tr-none shadow-md font-medium text-[15px] leading-relaxed">
-                                                ${msg.texto}
-                                            </div>
-                                            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center flex-shrink-0 mt-1 shadow-inner text-slate-500">
-                                                <i data-lucide="user" class="w-5 h-5"></i>
-                                            </div>
-                                        </div>
-                                    `;
-                                }
-                            });
-                            chatHTML += '</div>';
-                            return chatHTML;
-                        }
-                        else if (el.tipo === 'caso_practico') {
-                            let opcionesHTML = el.opciones.map((opt, optIdx) => `
-                                <button id="btn-caso-${leccion.id}-${index}-${optIdx}" onclick="resolverCaso('${leccion.id}', ${index}, ${optIdx}, ${opt.esCorrecta}, '${opt.feedback.replace(/'/g, "\\'")}')" class="w-full text-left p-4 rounded-2xl border-2 border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/30 transition-all text-slate-600 font-bold mb-3 group flex items-start">
-                                    <div class="w-6 h-6 rounded-full border-2 border-slate-300 group-hover:border-indigo-400 mr-4 mt-0.5 flex items-center justify-center flex-shrink-0 transition-colors" id="icon-caso-${leccion.id}-${index}-${optIdx}"></div>
-                                    <span class="leading-relaxed">${opt.texto}</span>
-                                </button>
-                            `).join('');
-
-                            return `
-                                <div class="bg-white border-2 border-slate-100 rounded-[2rem] p-6 md:p-8 mb-6 shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative overflow-hidden">
-                                    <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-                                    <div class="inline-flex items-center space-x-2 bg-rose-50 text-rose-700 font-black text-xs uppercase tracking-widest px-3 py-1.5 rounded-full mb-5 border border-rose-100">
-                                        <i data-lucide="target" class="w-4 h-4"></i> <span>Toma de Decisión</span>
-                                    </div>
-                                    <h5 class="text-xl md:text-2xl font-black text-slate-800 mb-6 leading-snug">${el.pregunta}</h5>
-                                    <div id="opciones-${leccion.id}-${index}" class="space-y-3">
-                                        ${opcionesHTML}
-                                    </div>
-                                    <div id="feedback-${leccion.id}-${index}" class="hidden mt-6 p-6 rounded-2xl transition-all duration-500 animate-fade-in-up">
-                                        <!-- Feedback inyectado por JS -->
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        return '';
                     }).join('');
 
+                    // UI Interactivo: Chat
+                    let chatHTML = '';
+                    if (leccion.chat) {
+                        chatHTML = `<div class="mt-8 p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-4">
+                            <div class="flex items-center space-x-2 mb-4 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> <span>Caso Conversacional</span>
+                            </div>`;
+                        leccion.chat.forEach(msg => {
+                            if(msg.sender === 'mentor') {
+                                chatHTML += `
+                                    <div class="flex items-start gap-3 w-11/12 md:w-5/6">
+                                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 text-indigo-600 border border-indigo-200">
+                                            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                        </div>
+                                        <div class="bg-white p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 text-[15px] text-slate-700">
+                                            ${msg.text}
+                                        </div>
+                                    </div>
+                                `;
+                            } else {
+                                chatHTML += `
+                                    <div class="flex items-start gap-3 w-11/12 md:w-5/6 ml-auto flex-row-reverse">
+                                        <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-white shadow-md">
+                                            <i data-lucide="user" class="w-4 h-4"></i>
+                                        </div>
+                                        <div class="bg-slate-800 p-4 rounded-2xl rounded-tr-sm shadow-sm text-[15px] text-white">
+                                            ${msg.text}
+                                        </div>
+                                    </div>
+                                `;
+                            }
+                        });
+                        chatHTML += `</div>`;
+                    }
+
+                    // UI Interactivo: Ejemplo Destacado
+                    let ejemploHTML = '';
+                    if (leccion.ejemplo) {
+                        ejemploHTML = `
+                            <div class="mt-8 bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-3xl border border-amber-100/60 shadow-inner">
+                                <h5 class="text-amber-800 font-black mb-3 flex items-center">
+                                    <i data-lucide="lightbulb" class="w-5 h-5 mr-2 text-amber-500"></i> ${leccion.ejemplo.titulo}
+                                </h5>
+                                <p class="text-amber-900/80 text-[15px] leading-relaxed">
+                                    ${leccion.ejemplo.contenido}
+                                </p>
+                            </div>
+                        `;
+                    }
+
+                    // UI Interactivo: Caso Práctico (Quiz)
+                    let casoHTML = '';
+                    if (leccion.casoPractico) {
+                        casoHTML = `
+                            <div class="mt-8 bg-indigo-50/50 p-6 md:p-8 rounded-3xl border border-indigo-100 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-200 opacity-20 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2"></div>
+                                <div class="flex items-center space-x-2 mb-4 text-indigo-500 font-black text-xs uppercase tracking-widest relative z-10">
+                                    <i data-lucide="target" class="w-4 h-4"></i> <span>Reto de Decisión</span>
+                                </div>
+                                <p class="text-lg font-bold text-slate-800 mb-6 relative z-10 leading-snug">
+                                    ${leccion.casoPractico.pregunta}
+                                </p>
+                                <div class="space-y-3 relative z-10" id="quiz-${leccion.id}">
+                                    ${leccion.casoPractico.opciones.map((opc, idx) => `
+                                        <button onclick="resolverCaso(this, ${opc.correcto}, \`${opc.feedback.replace(/'/g, "\\'")}\`)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-indigo-300 hover:bg-indigo-50 transition-all font-medium text-slate-600 flex items-center gap-3 group">
+                                            <div class="w-6 h-6 rounded-full border-2 border-slate-300 group-hover:border-indigo-400 flex items-center justify-center flex-shrink-0 transition-colors"></div>
+                                            <span>${opc.texto}</span>
+                                        </button>
+                                    `).join('')}
+                                </div>
+                                <div id="feedback-${leccion.id}" class="mt-2"></div>
+                            </div>
+                        `;
+                    }
+
                     html += `
-                        <div class="accordion-item ${isExpanded ? 'expanded' : ''} group rounded-[2rem] border-2 transition-all duration-500 overflow-hidden ${isExpanded ? 'bg-white border-indigo-200 shadow-xl shadow-indigo-100/50' : 'bg-slate-50/50 border-transparent hover:bg-white hover:border-slate-200 hover:shadow-md'}" >
-                            <!-- Header Clickable -->
+                        <div class="accordion-item ${isExpanded ? 'expanded' : ''} group rounded-[2rem] border-2 transition-all duration-500 overflow-hidden ${isExpanded ? 'bg-white border-indigo-200 shadow-lg' : 'bg-slate-50/50 border-transparent hover:bg-white hover:border-slate-200 hover:shadow-md'}">
                             <div class="p-6 md:p-8 cursor-pointer" onclick="toggleAccordion('${leccion.id}')">
                                 <div class="flex justify-between items-start gap-4">
                                     <div class="flex-1">
                                         <div class="flex items-center space-x-3 mb-2">
-                                            <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full ${isExpanded ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-500 group-hover:bg-indigo-50 group-hover:text-indigo-600'} transition-colors">Lección</span>
+                                            <span class="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full ${isExpanded ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600 group-hover:bg-indigo-50 group-hover:text-indigo-600'} transition-colors">Lección</span>
                                         </div>
-                                        <h4 class="text-xl md:text-2xl font-black mb-2 tracking-tight transition-colors ${isExpanded ? 'text-indigo-950' : 'text-slate-800 group-hover:text-indigo-700'}">
+                                        <h4 class="text-xl md:text-2xl font-black mb-1 tracking-tight transition-colors ${isExpanded ? 'text-indigo-950' : 'text-slate-800 group-hover:text-indigo-700'}">
                                             ${leccion.titulo}
                                         </h4>
                                         <p class="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
@@ -878,9 +902,17 @@
                                 </div>
                             </div>
                             
-                            <!-- Contenido Interactivo -->
-                            <div class="accordion-content px-6 md:px-8 pb-6 md:pb-8 ${isExpanded ? 'border-t border-slate-100 pt-6 md:pt-8' : ''}">
-                                ${contenidoFormateado}
+                            <div class="accordion-content ${isExpanded ? 'px-6 md:px-8 pb-8 border-t border-slate-100' : 'px-6 md:px-8'}">
+                                <div class="pt-6">
+                                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed whitespace-pre-line text-[15px] md:text-lg font-medium">
+                                        ${contenidoFormateado}
+                                    </div>
+                                    
+                                    <!-- Componentes Interactivos -->
+                                    ${ejemploHTML}
+                                    ${chatHTML}
+                                    ${casoHTML}
+                                </div>
                             </div>
                         </div>
                     `;
@@ -893,59 +925,51 @@
             lucide.createIcons();
         }
 
+        // Lógica para resolver los casos prácticos (Quizzes)
+        window.resolverCaso = function(btnElement, esCorrecto, feedbackTexto) {
+            const parent = btnElement.parentElement;
+            
+            // Deshabilitar todos los botones hermanos
+            Array.from(parent.children).forEach(child => {
+                child.disabled = true;
+                child.classList.add('opacity-50', 'cursor-not-allowed', 'hover:border-slate-200', 'hover:bg-white');
+                child.classList.remove('hover:border-indigo-300', 'hover:bg-indigo-50');
+            });
+
+            // Resaltar el botón clickeado
+            btnElement.classList.remove('opacity-50', 'bg-white', 'border-slate-200');
+            const iconDiv = btnElement.querySelector('div');
+            
+            if(esCorrecto) {
+                btnElement.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-900');
+                iconDiv.className = 'w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0 text-white';
+                iconDiv.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i>';
+            } else {
+                btnElement.classList.add('bg-rose-50', 'border-rose-500', 'text-rose-900');
+                iconDiv.className = 'w-6 h-6 rounded-full bg-rose-500 flex items-center justify-center flex-shrink-0 text-white';
+                iconDiv.innerHTML = '<i data-lucide="x" class="w-4 h-4"></i>';
+            }
+
+            // Mostrar el feedback animado
+            const feedbackContainer = parent.nextElementSibling;
+            feedbackContainer.innerHTML = `
+                <div class="mt-6 p-5 rounded-2xl ${esCorrecto ? 'bg-emerald-100 text-emerald-900 border border-emerald-200' : 'bg-rose-100 text-rose-900 border border-rose-200'} flex gap-4 animate-fade-in-up shadow-sm">
+                    <div class="mt-0.5">
+                        <i data-lucide="${esCorrecto ? 'check-circle-2' : 'alert-circle'}" class="w-7 h-7 ${esCorrecto ? 'text-emerald-600' : 'text-rose-600'}"></i>
+                    </div>
+                    <div>
+                        <h6 class="font-black mb-1 ${esCorrecto ? 'text-emerald-800' : 'text-rose-800'}">${esCorrecto ? '¡Respuesta Correcta!' : 'Punto de Mejora'}</h6>
+                        <p class="text-[15px] font-medium leading-relaxed opacity-90">${feedbackTexto}</p>
+                    </div>
+                </div>
+            `;
+            
+            lucide.createIcons();
+        };
+
         function toggleAccordion(id) {
             expandedModule = expandedModule === id ? null : id;
             renderAcademia();
-        }
-
-        // Lógica para evaluar los Casos Prácticos
-        function resolverCaso(leccionId, elIdx, optIdx, esCorrecta, feedbackTexto) {
-            // Deshabilitar todos los botones para evitar doble respuesta
-            const optionsContainer = document.getElementById(`opciones-${leccionId}-${elIdx}`);
-            const buttons = optionsContainer.querySelectorAll('button');
-            buttons.forEach((btn, index) => {
-                btn.onclick = null; // Quitar evento
-                btn.classList.add('opacity-60', 'cursor-not-allowed');
-                btn.classList.remove('hover:border-indigo-400', 'hover:bg-indigo-50/30');
-            });
-
-            // Resaltar el botón seleccionado
-            const selectedBtn = document.getElementById(`btn-caso-${leccionId}-${elIdx}-${optIdx}`);
-            selectedBtn.classList.remove('opacity-60');
-            const selectedIcon = document.getElementById(`icon-caso-${leccionId}-${elIdx}-${optIdx}`);
-
-            // Mostrar Contenedor de Feedback
-            const feedbackContainer = document.getElementById(`feedback-${leccionId}-${elIdx}`);
-            feedbackContainer.classList.remove('hidden');
-
-            if (esCorrecta) {
-                selectedBtn.classList.add('border-emerald-500', 'bg-emerald-50/50', 'ring-2', 'ring-emerald-500/20');
-                selectedBtn.classList.replace('text-slate-600', 'text-emerald-900');
-                selectedIcon.classList.replace('border-slate-300', 'border-emerald-500');
-                selectedIcon.classList.add('bg-emerald-500');
-                selectedIcon.innerHTML = '<i data-lucide="check" class="text-white w-3 h-3 stroke-[3px]"></i>';
-                
-                feedbackContainer.classList.add('bg-emerald-100/80', 'border', 'border-emerald-200', 'text-emerald-900');
-                feedbackContainer.innerHTML = `
-                    <div class="flex items-center font-black mb-2 text-lg"><i data-lucide="check-circle" class="w-6 h-6 mr-2 text-emerald-600"></i> ¡Decisión Correcta!</div>
-                    <p class="text-emerald-800 font-medium leading-relaxed">${feedbackTexto}</p>
-                `;
-            } else {
-                selectedBtn.classList.add('border-rose-500', 'bg-rose-50/50', 'ring-2', 'ring-rose-500/20');
-                selectedBtn.classList.replace('text-slate-600', 'text-rose-900');
-                selectedIcon.classList.replace('border-slate-300', 'border-rose-500');
-                selectedIcon.classList.add('bg-rose-500');
-                selectedIcon.innerHTML = '<i data-lucide="x" class="text-white w-3 h-3 stroke-[3px]"></i>';
-                
-                feedbackContainer.classList.add('bg-rose-100/80', 'border', 'border-rose-200', 'text-rose-900');
-                feedbackContainer.innerHTML = `
-                    <div class="flex items-center font-black mb-2 text-lg"><i data-lucide="alert-triangle" class="w-6 h-6 mr-2 text-rose-600"></i> Repensemos esa estrategia...</div>
-                    <p class="text-rose-800 font-medium leading-relaxed">${feedbackTexto}</p>
-                `;
-            }
-            
-            // Re-renderizar los íconos de Lucide
-            lucide.createIcons();
         }
 
         // --- GASTOS HORMIGA ---
