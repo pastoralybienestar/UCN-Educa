@@ -65,6 +65,7 @@
         .emerald-range { accent-color: #10b981; }
         .indigo-range { accent-color: #6366f1; }
         .rose-range { accent-color: #f43f5e; }
+        .violet-range { accent-color: #8b5cf6; }
 
         /* Hide views by default */
         .view-section { display: none; }
@@ -97,7 +98,7 @@
                     <i data-lucide="lightbulb" class="text-amber-400 w-7 h-7"></i>
                 </div>
                 <h1 class="font-black text-2xl tracking-tighter text-slate-900 hidden lg:block">
-                    Educa<span class="text-indigo-600">UCN</span>
+                    FinEduca<span class="text-indigo-600">.</span>
                 </h1>
             </div>
             
@@ -182,7 +183,7 @@
                             <h3 class="text-2xl font-black text-slate-800 tracking-tight flex items-center">
                                 <i data-lucide="lightbulb" class="mr-3 text-amber-500 w-7 h-7"></i> Laboratorio
                             </h3>
-                            <span class="text-sm font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">3 Herramientas</span>
+                            <span class="text-sm font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">4 Herramientas</span>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1">
@@ -192,7 +193,7 @@
                                 </div>
                                 <div>
                                     <span class="font-black text-emerald-950 mb-1.5 block text-xl tracking-tight">Inversiones</span>
-                                    <span class="text-sm font-medium text-emerald-800/70 leading-snug block">Calcula el interés compuesto a futuro.</span>
+                                    <span class="text-sm font-medium text-emerald-800/70 leading-snug block">Calcula el interés compuesto.</span>
                                 </div>
                             </div>
                             
@@ -202,26 +203,43 @@
                                 </div>
                                 <div>
                                     <span class="font-black text-amber-950 mb-1.5 block text-xl tracking-tight">Fugas de Dinero</span>
-                                    <span class="text-sm font-medium text-amber-800/70 leading-snug block">Descubre el costo real de tus gastos hormiga.</span>
+                                    <span class="text-sm font-medium text-amber-800/70 leading-snug block">El costo de los gastos hormiga.</span>
                                 </div>
                             </div>
 
-                            <div onclick="switchTab('credito')" class="bg-gradient-to-br from-rose-50 to-pink-50/50 hover:from-rose-100 hover:to-pink-100 rounded-[2rem] p-6 transition-all duration-300 cursor-pointer border border-rose-100/50 group flex flex-col justify-between sm:col-span-2 relative overflow-hidden">
+                            <div onclick="switchTab('credito')" class="bg-gradient-to-br from-rose-50 to-pink-50/50 hover:from-rose-100 hover:to-pink-100 rounded-[2rem] p-6 transition-all duration-300 cursor-pointer border border-rose-100/50 group flex flex-col justify-between relative overflow-hidden">
                                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-0 group-hover:opacity-10 transition-opacity duration-500 mix-blend-multiply"></div>
                                 <div class="absolute right-0 bottom-0 opacity-5 transform translate-x-4 translate-y-4 z-0">
-                                    <i data-lucide="dollar-sign" class="w-32 h-32"></i>
+                                    <i data-lucide="dollar-sign" class="w-24 h-24"></i>
                                 </div>
-                                <div class="flex justify-between items-start relative z-10">
-                                    <div class="bg-white/80 backdrop-blur-sm w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform duration-500 text-rose-600">
+                                <div class="flex justify-between items-start relative z-10 mb-4">
+                                    <div class="bg-white/80 backdrop-blur-sm w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-500 text-rose-600">
                                         <i data-lucide="dollar-sign" class="w-7 h-7 stroke-[2.5px]"></i>
                                     </div>
-                                    <div class="bg-rose-200/50 p-2 rounded-full text-rose-700 group-hover:bg-white group-hover:shadow-sm transition-all">
-                                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:-rotate-45 transition-transform duration-300"></i>
+                                </div>
+                                <div class="relative z-10">
+                                    <span class="font-black text-rose-950 mb-1 block text-xl tracking-tight">Deudas</span>
+                                    <span class="text-sm font-medium text-rose-800/70">Analiza el costo de tus créditos.</span>
+                                </div>
+                            </div>
+
+                            <!-- NEW BUTTON: Inteligencia Financiera -->
+                            <div onclick="switchTab('inteligencia')" class="bg-gradient-to-br from-violet-50 to-purple-50/50 hover:from-violet-100 hover:to-purple-100 rounded-[2rem] p-6 transition-all duration-300 cursor-pointer border border-violet-100/50 group flex flex-col justify-between relative overflow-hidden">
+                                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-0 group-hover:opacity-10 transition-opacity duration-500 mix-blend-multiply"></div>
+                                <div class="absolute right-0 bottom-0 opacity-5 transform translate-x-4 translate-y-4 z-0">
+                                    <i data-lucide="brain" class="w-24 h-24"></i>
+                                </div>
+                                <div class="flex justify-between items-start relative z-10 mb-4">
+                                    <div class="bg-white/80 backdrop-blur-sm w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-500 text-violet-600">
+                                        <i data-lucide="brain-circuit" class="w-7 h-7 stroke-[2.5px]"></i>
+                                    </div>
+                                    <div class="bg-violet-200/50 p-2 rounded-full text-violet-700 group-hover:bg-white group-hover:shadow-sm transition-all animate-pulse">
+                                        <i data-lucide="sparkles" class="w-4 h-4"></i>
                                     </div>
                                 </div>
-                                <div class="relative z-10 mt-4">
-                                    <span class="font-black text-rose-950 mb-1 block text-xl tracking-tight">Evaluador de Deudas</span>
-                                    <span class="text-sm font-medium text-rose-800/70">Analiza el costo e intereses de tus créditos.</span>
+                                <div class="relative z-10">
+                                    <span class="font-black text-violet-950 mb-1 block text-xl tracking-tight">Inteligencia</span>
+                                    <span class="text-sm font-medium text-violet-800/70">Mide tu salud financiera real.</span>
                                 </div>
                             </div>
                         </div>
@@ -498,6 +516,119 @@
                 </div>
             </div>
 
+            <!-- INTELIGENCIA FINANCIERA VIEW (NEW) -->
+            <div id="view-inteligencia" class="view-section animate-fade-in-up space-y-6">
+                <div class="bg-white/70 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-full md:w-1/2 h-64 md:h-full opacity-15 pointer-events-none bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center [mask-image:linear-gradient(to_bottom,black,transparent)] md:[mask-image:linear-gradient(to_left,black,transparent)] transition-all duration-700 hover:opacity-25"></div>
+                    
+                    <div class="relative z-10 max-w-3xl mb-10">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-violet-100 text-violet-600 mb-6 shadow-inner">
+                            <i data-lucide="brain-circuit" class="w-8 h-8 stroke-[2.5px]"></i>
+                        </div>
+                        <h2 class="text-4xl font-black text-slate-800 mb-4 tracking-tight">Salud Financiera (50/30/20)</h2>
+                        <p class="text-slate-500 text-lg font-medium">
+                            Pon a prueba tus finanzas. Ingresa tus números mensuales y descubre de forma visual si estás construyendo riqueza o si caminas hacia la quiebra.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 xl:grid-cols-12 gap-10">
+                        <div class="xl:col-span-5 space-y-6 bg-slate-50/80 p-8 rounded-[2rem] border border-slate-100/80 shadow-inner h-fit relative z-10">
+                            <div>
+                                <label class="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2 flex items-center">
+                                    <i data-lucide="wallet" class="w-4 h-4 mr-2 text-emerald-500"></i> Ingresos Totales Mensuales
+                                </label>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <span class="text-slate-400 font-black text-xl">$</span>
+                                    </div>
+                                    <input type="number" id="intIngreso" value="3000" class="pl-10 w-full rounded-2xl border-2 border-slate-200 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/20 bg-white py-3 px-4 font-black text-xl text-slate-800 outline-none transition-all shadow-sm" />
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t-2 border-slate-200/60">
+                                <label class="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2 flex justify-between items-center">
+                                    <span class="flex items-center"><i data-lucide="home" class="w-4 h-4 mr-2 text-rose-500"></i> Gastos Fijos (Necesidades)</span>
+                                    <span id="labelIntFijos" class="text-xs text-rose-600 font-bold bg-rose-50 px-2 py-1 rounded">50%</span>
+                                </label>
+                                <p class="text-xs text-slate-400 mb-3">Vivienda, mercado, servicios, transporte.</p>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <span class="text-slate-400 font-black text-xl">$</span>
+                                    </div>
+                                    <input type="number" id="intFijos" value="1500" class="pl-10 w-full rounded-2xl border-2 border-slate-200 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 bg-white py-3 px-4 font-black text-xl text-slate-800 outline-none transition-all shadow-sm" />
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t-2 border-slate-200/60">
+                                <label class="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2 flex justify-between items-center">
+                                    <span class="flex items-center"><i data-lucide="shopping-cart" class="w-4 h-4 mr-2 text-amber-500"></i> Gastos Flexibles (Deseos)</span>
+                                    <span id="labelIntFlexibles" class="text-xs text-amber-600 font-bold bg-amber-50 px-2 py-1 rounded">30%</span>
+                                </label>
+                                <p class="text-xs text-slate-400 mb-3">Restaurantes, ropa, ocio, viajes.</p>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <span class="text-slate-400 font-black text-xl">$</span>
+                                    </div>
+                                    <input type="number" id="intFlexibles" value="900" class="pl-10 w-full rounded-2xl border-2 border-slate-200 focus:border-amber-500 focus:ring-4 focus:ring-amber-500/20 bg-white py-3 px-4 font-black text-xl text-slate-800 outline-none transition-all shadow-sm" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="xl:col-span-7 flex flex-col gap-6 relative z-10">
+                            <!-- Diagnostic Card -->
+                            <div id="diagnosticoCard" class="bg-gradient-to-br from-indigo-600 to-violet-700 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden transition-all duration-500">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2"></div>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <p class="text-xs font-black text-violet-200 uppercase tracking-widest mb-2 flex items-center">
+                                            <i data-lucide="activity" class="w-4 h-4 mr-2"></i> Diagnóstico en vivo
+                                        </p>
+                                        <h3 id="diagTitulo" class="text-2xl font-black mb-2">Excelente Equilibrio</h3>
+                                        <p id="diagTexto" class="text-violet-100 font-medium text-sm leading-relaxed max-w-md">Tus finanzas están alineadas con la regla del 50/30/20. Mantén este hábito para asegurar tu futuro.</p>
+                                    </div>
+                                    <div id="diagIcon" class="bg-white/20 p-4 rounded-full backdrop-blur-sm">
+                                        <i data-lucide="award" class="w-8 h-8 text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
+                                <!-- Chart -->
+                                <div class="bg-white border border-slate-100 rounded-[2rem] p-6 shadow-sm flex flex-col items-center justify-center min-h-[300px]">
+                                    <h4 class="text-sm font-black text-slate-500 uppercase tracking-widest w-full text-left mb-4">Distribución</h4>
+                                    <div class="relative w-full h-48">
+                                        <canvas id="inteligenciaChart"></canvas>
+                                        <!-- Texto centrado del Donut -->
+                                        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Ahorro</span>
+                                            <span id="centerChartAhorro" class="text-2xl font-black text-emerald-500">20%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Result -->
+                                <div class="bg-white border border-slate-100 rounded-[2rem] p-6 shadow-sm flex flex-col justify-center">
+                                    <p class="text-sm font-black text-slate-500 uppercase tracking-widest mb-4">Capacidad de Ahorro</p>
+                                    <div class="flex items-end gap-2 mb-2">
+                                        <span id="resIntAhorroValor" class="text-4xl lg:text-5xl font-black text-slate-800">$600</span>
+                                        <span class="text-lg font-bold text-slate-400 mb-1">/ mes</span>
+                                    </div>
+                                    <p class="text-sm font-medium text-slate-500 mb-6">Dinero libre para invertir o pagar deudas aceleradamente.</p>
+                                    
+                                    <div class="w-full bg-slate-100 rounded-full h-3 mb-2 overflow-hidden border border-slate-200">
+                                        <div id="barAhorro" class="bg-emerald-500 h-3 rounded-full transition-all duration-700" style="width: 20%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-400">
+                                        <span>0%</span>
+                                        <span>Meta: 20%+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -510,6 +641,7 @@
             { id: 'hormiga', icon: 'coffee', label: 'Gastos' },
             { id: 'interes', icon: 'trending-up', label: 'Inversión' },
             { id: 'credito', icon: 'dollar-sign', label: 'Créditos' },
+            { id: 'inteligencia', icon: 'brain', label: 'Salud Financiera' }, // NEW ITEM
         ];
 
         let habitos = [
@@ -659,7 +791,7 @@
         let currentTab = 'dashboard';
         let interesChartInstance = null;
         let creditoChartInstance = null;
-
+        let inteligenciaChartInstance = null; // NEW CHART
         // --- UTILITIES ---
         const formatoMoneda = (valor) => {
             return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(valor);
@@ -680,6 +812,7 @@
             initCharts();
             calcularInteres();
             calcularCredito();
+            calcularInteligencia(); // NEW CALCULATION
 
             // Set up Event Listeners for inputs
             setupInputListeners();
@@ -743,6 +876,7 @@
             // Refresh charts if needed (Chart.js sometimes needs a resize trigger if rendered while hidden)
             if(tabId === 'interes' && interesChartInstance) interesChartInstance.resize();
             if(tabId === 'credito' && creditoChartInstance) creditoChartInstance.resize();
+            if(tabId === 'inteligencia' && inteligenciaChartInstance) inteligenciaChartInstance.resize();
         }
 
         // --- HABITOS ---
@@ -1028,6 +1162,11 @@
             ['credMonto', 'credTasa', 'credPlazo'].forEach(id => {
                 document.getElementById(id).addEventListener('input', calcularCredito);
             });
+
+            // Inteligencia (Salud Financiera)
+            ['intIngreso', 'intFijos', 'intFlexibles'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calcularInteligencia);
+            });
         }
 
         // --- CHARTS INITIALIZATION ---
@@ -1178,6 +1317,43 @@
                     }
                 }
             });
+
+            // Inteligencia (Salud Financiera) Chart
+            const ctxInteligencia = document.getElementById('inteligenciaChart').getContext('2d');
+            inteligenciaChartInstance = new Chart(ctxInteligencia, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Necesidades (Fijos)', 'Deseos (Flexibles)', 'Ahorro/Inversión'],
+                    datasets: [{
+                        data: [50, 30, 20],
+                        backgroundColor: ['#f43f5e', '#f59e0b', '#10b981'], // Rose, Amber, Emerald
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%', // Hace el donut más delgado para poner texto al medio
+                    plugins: {
+                        legend: { display: false }, // Ocultamos la leyenda por defecto para diseño más limpio
+                        tooltip: {
+                            backgroundColor: 'white',
+                            titleColor: '#1e293b',
+                            bodyColor: '#1e293b',
+                            borderColor: '#e2e8f0',
+                            borderWidth: 1,
+                            padding: 12,
+                            bodyFont: { weight: 'bold' },
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label + ': ' + formatoMoneda(context.raw);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
         }
 
         // --- INTERES COMPUESTO CALCULATION ---
@@ -1271,6 +1447,85 @@
                 creditoChartInstance.data.datasets[1].data = dataSaldo;
                 creditoChartInstance.update();
             }
+        }
+
+        // --- INTELIGENCIA FINANCIERA CALCULATION ---
+        function calcularInteligencia() {
+            const ingresos = parseFloat(document.getElementById('intIngreso').value) || 0;
+            const fijos = parseFloat(document.getElementById('intFijos').value) || 0;
+            const flexibles = parseFloat(document.getElementById('intFlexibles').value) || 0;
+
+            const ahorro = ingresos - fijos - flexibles;
+            
+            // Porcentajes
+            let pFijos = ingresos > 0 ? (fijos / ingresos) * 100 : 0;
+            let pFlex = ingresos > 0 ? (flexibles / ingresos) * 100 : 0;
+            let pAhorro = ingresos > 0 ? (ahorro / ingresos) * 100 : 0;
+
+            // Actualizar Etiquetas UI
+            document.getElementById('labelIntFijos').innerText = pFijos.toFixed(1) + '%';
+            document.getElementById('labelIntFlexibles').innerText = pFlex.toFixed(1) + '%';
+            document.getElementById('resIntAhorroValor').innerText = formatoMoneda(ahorro);
+            
+            // Actualizar Donut central
+            const chartCenter = document.getElementById('centerChartAhorro');
+            chartCenter.innerText = pAhorro.toFixed(1) + '%';
+            chartCenter.className = `text-2xl font-black ${pAhorro >= 20 ? 'text-emerald-500' : (pAhorro > 0 ? 'text-amber-500' : 'text-rose-500')}`;
+
+            // Actualizar Barra de Ahorro
+            const barAhorro = document.getElementById('barAhorro');
+            let barWidth = Math.max(0, Math.min(100, pAhorro)); // Cap at 0-100%
+            barAhorro.style.width = barWidth + '%';
+            barAhorro.className = `h-3 rounded-full transition-all duration-700 ${pAhorro >= 20 ? 'bg-emerald-500' : (pAhorro > 0 ? 'bg-amber-400' : 'bg-rose-500')}`;
+
+            // Actualizar Gráfico Chart.js
+            if (inteligenciaChartInstance) {
+                // Si el ahorro es negativo, lo mostramos como 0 en el donut para no romperlo visualmente, 
+                // pero el diagnóstico se encargará de avisar.
+                inteligenciaChartInstance.data.datasets[0].data = [fijos, flexibles, Math.max(0, ahorro)];
+                inteligenciaChartInstance.update();
+            }
+
+            // Lógica del Diagnóstico
+            const card = document.getElementById('diagnosticoCard');
+            const titulo = document.getElementById('diagTitulo');
+            const texto = document.getElementById('diagTexto');
+            const icon = document.getElementById('diagIcon');
+
+            if (ahorro < 0) {
+                // Alerta Roja - Gastando más de lo que gana
+                card.className = "bg-gradient-to-br from-rose-600 to-red-700 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden transition-all duration-500";
+                titulo.innerText = "¡Alerta Roja de Quiebra!";
+                texto.innerText = "Estás gastando más dinero del que ingresas. Estás financiando tu estilo de vida con deudas. Detén tus gastos flexibles inmediatamente.";
+                icon.innerHTML = '<i data-lucide="alert-triangle" class="w-8 h-8 text-white"></i>';
+            } else if (pFijos > 60) {
+                // Alerta Amarilla - Gastos Fijos muy altos
+                card.className = "bg-gradient-to-br from-amber-500 to-orange-600 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden transition-all duration-500";
+                titulo.innerText = "Peligro Estructural";
+                texto.innerText = "Tus gastos fijos (necesidades) son demasiado altos para tu salario. Estás a una emergencia de endeudarte. Considera mudarte o aumentar ingresos.";
+                icon.innerHTML = '<i data-lucide="alert-circle" class="w-8 h-8 text-white"></i>';
+            } else if (pAhorro >= 20 && pFijos <= 50 && pFlex <= 30) {
+                // Excelente - Cumple 50/30/20
+                card.className = "bg-gradient-to-br from-emerald-600 to-teal-700 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden transition-all duration-500";
+                titulo.innerText = "¡Salud Financiera de Hierro!";
+                texto.innerText = "Tus finanzas están perfectamente alineadas con la regla del 50/30/20. Estás construyendo verdadera riqueza. ¡Sigue invirtiendo ese 20%!";
+                icon.innerHTML = '<i data-lucide="shield-check" class="w-8 h-8 text-white"></i>';
+            } else if (pAhorro > 0 && pAhorro < 20) {
+                // Sobreviviendo - Ahorra pero poco
+                card.className = "bg-gradient-to-br from-indigo-500 to-violet-600 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden transition-all duration-500";
+                titulo.innerText = "Vas por buen camino";
+                texto.innerText = "Logras ahorrar algo de dinero al mes, lo cual es positivo, pero no estás llegando al 20% ideal. Recorta algunos 'Deseos' para acelerar tus metas.";
+                icon.innerHTML = '<i data-lucide="trending-up" class="w-8 h-8 text-white"></i>';
+            } else {
+                // Caso neutro / sin ahorro
+                card.className = "bg-gradient-to-br from-slate-600 to-slate-700 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden transition-all duration-500";
+                titulo.innerText = "Estancamiento Financiero";
+                texto.innerText = "Estás gastando exactamente lo que ganas. Un mes sin ingresos o una emergencia médica te obligará a adquirir deudas.";
+                icon.innerHTML = '<i data-lucide="minus-circle" class="w-8 h-8 text-white"></i>';
+            }
+            
+            // Re-render icon for diagnostic
+            lucide.createIcons();
         }
 
     </script>
