@@ -63,7 +63,7 @@
         /* Color themes for sliders */
         .amber-range { accent-color: #f59e0b; }
         .emerald-range { accent-color: #10b981; }
-        .indigo-range { accent-color: #6366f1; }
+        .blue-range { accent-color: #3b82f6; }
         .rose-range { accent-color: #f43f5e; }
         .violet-range { accent-color: #8b5cf6; }
 
@@ -84,22 +84,22 @@
         }
     </style>
 </head>
-<body class="bg-slate-50/50 font-sans text-slate-800 selection:bg-indigo-200 relative overflow-x-hidden md:flex min-h-screen">
+<body class="bg-slate-50/50 font-sans text-slate-800 selection:bg-pink-200 selection:text-pink-900 relative overflow-x-hidden md:flex min-h-screen">
 
-    <!-- Background Ambient Lights (More vivid and colorful) -->
-    <div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-400/40 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-fuchsia-400/30 rounded-full blur-[150px] pointer-events-none z-0"></div>
-    <div class="fixed top-[40%] left-[60%] w-[30%] h-[30%] bg-emerald-300/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <!-- Background Ambient Lights (Now much more vibrant and diverse: Cyan, Rose, Amber) -->
+    <div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] bg-cyan-400/30 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-rose-300/30 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed top-[40%] left-[60%] w-[30%] h-[30%] bg-amber-300/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
     <!-- FLOATING SIDEBAR (Desktop) -->
     <aside class="hidden md:flex flex-col w-28 lg:w-72 fixed h-[calc(100vh-2rem)] top-4 left-4 z-50">
         <div class="bg-white/80 backdrop-blur-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] h-full rounded-[2.5rem] flex flex-col p-4 lg:p-6 transition-all">
             <div class="flex items-center justify-center lg:justify-start space-x-4 mb-10 mt-4 lg:pl-1">
-                <div class="bg-gradient-to-br from-indigo-600 to-violet-800 p-3 rounded-2xl text-white shadow-lg shadow-indigo-500/30 flex-shrink-0">
+                <div class="bg-gradient-to-br from-blue-500 to-cyan-400 p-3 rounded-2xl text-white shadow-lg shadow-blue-500/30 flex-shrink-0">
                     <i data-lucide="brain" class="text-white w-7 h-7"></i>
                 </div>
                 <h1 class="font-black text-[1.1rem] leading-tight tracking-tighter text-slate-900 hidden lg:block">
-                    Inteligencia<br><span class="text-indigo-600">Financiera.</span>
+                    Inteligencia<br><span class="text-blue-600">Financiera.</span>
                 </h1>
             </div>
             
@@ -122,7 +122,7 @@
         <!-- Mobile Header -->
         <header class="flex justify-between items-center mb-8 pt-2 md:hidden">
             <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-br from-indigo-600 to-violet-800 p-2.5 rounded-xl text-white shadow-md">
+                <div class="bg-gradient-to-br from-blue-500 to-cyan-400 p-2.5 rounded-xl text-white shadow-md">
                     <i data-lucide="brain" class="w-5 h-5"></i>
                 </div>
                 <h1 class="font-black text-xl tracking-tighter text-slate-900">Inteligencia F.</h1>
@@ -132,43 +132,43 @@
         <!-- Desktop Context Header -->
         <div class="hidden md:block mb-12">
             <h1 id="page-title" class="text-4xl font-black text-slate-900 tracking-tight">Inicio</h1>
-            <div class="w-16 h-2 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full mt-4"></div>
+            <div class="w-16 h-2 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mt-4"></div>
         </div>
 
         <div class="relative">
             
             <!-- DASHBOARD VIEW -->
             <div id="view-dashboard" class="view-section active animate-fade-in-up space-y-6">
-                <!-- Premium Hero Section -->
-                <div class="bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-[0_20px_50px_rgba(79,70,229,0.3)] relative overflow-hidden ring-1 ring-white/20 group">
+                <!-- Premium Hero Section (Vibrant Blue/Pink mesh) -->
+                <div class="bg-gradient-to-br from-blue-700 via-purple-600 to-pink-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-[0_20px_50px_rgba(59,130,246,0.3)] relative overflow-hidden ring-1 ring-white/20 group">
                     <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"></div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/90 via-violet-900/80 to-transparent"></div>
-                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-400/40 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3"></div>
-                    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-fuchsia-400/30 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/60 to-transparent"></div>
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-400/40 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3"></div>
+                    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-400/40 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3"></div>
                     
                     <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-10">
                         <div class="max-w-xl">
-                            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-full text-indigo-100 text-sm font-semibold mb-8 shadow-[0_4px_24px_-8px_rgba(0,0,0,0.5)]">
-                                <i data-lucide="compass" class="animate-pulse text-indigo-300 w-4 h-4"></i> 
+                            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-full text-cyan-100 text-sm font-semibold mb-8 shadow-[0_4px_24px_-8px_rgba(0,0,0,0.5)]">
+                                <i data-lucide="compass" class="animate-pulse text-cyan-300 w-4 h-4"></i> 
                                 <span class="tracking-wide">Tu Ecosistema Financiero</span>
                             </div>
                             <h2 class="text-5xl md:text-6xl font-black mb-6 leading-[1.1] tracking-tighter text-white">
-                                Acelera tu <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-violet-200 to-fuchsia-200 drop-shadow-sm">Inteligencia Financiera</span>
+                                Acelera tu <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-200 to-pink-200 drop-shadow-sm">Inteligencia Financiera</span>
                             </h2>
-                            <p class="text-indigo-100/90 text-lg mb-10 leading-relaxed font-medium max-w-lg">
+                            <p class="text-blue-50/90 text-lg mb-10 leading-relaxed font-medium max-w-lg">
                                 Domina las reglas del dinero, elimina tus fugas de capital y simula tu camino hacia la verdadera libertad financiera.
                             </p>
                             
-                            <button onclick="switchTab('aprender')" class="bg-white text-indigo-900 px-8 py-4 rounded-2xl font-black transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.6)] flex items-center space-x-3 transform hover:-translate-y-1 group border border-white/50">
-                                <div class="bg-indigo-50 p-2 rounded-full group-hover:bg-indigo-100 transition-colors">
-                                    <i data-lucide="book-open" class="text-indigo-600 w-5 h-5"></i>
+                            <button onclick="switchTab('aprender')" class="bg-white text-blue-900 px-8 py-4 rounded-2xl font-black transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.6)] flex items-center space-x-3 transform hover:-translate-y-1 group border border-white/50">
+                                <div class="bg-blue-50 p-2 rounded-full group-hover:bg-blue-100 transition-colors">
+                                    <i data-lucide="book-open" class="text-blue-600 w-5 h-5"></i>
                                 </div>
                                 <span class="tracking-tight text-lg">Entrar a la Academia</span>
                                 <i data-lucide="arrow-right" class="group-hover:translate-x-1 transition-transform w-5 h-5"></i>
                             </button>
                         </div>
                         <div class="hidden lg:flex justify-center items-center relative">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-indigo-400 to-fuchsia-400 rounded-full blur-[80px] opacity-50 animate-pulse"></div>
+                            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-pink-400 rounded-full blur-[80px] opacity-60 animate-pulse"></div>
                             <div class="relative bg-white/10 backdrop-blur-2xl border border-white/20 p-10 rounded-[2.5rem] shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-700 hover:scale-105">
                                 <i data-lucide="layout-grid" class="text-white/90 drop-shadow-2xl w-24 h-24 stroke-1"></i>
                             </div>
@@ -224,22 +224,22 @@
                                 </div>
                             </div>
 
-                            <div onclick="switchTab('inteligencia')" class="bg-gradient-to-br from-violet-50 to-purple-50/80 hover:from-violet-100 hover:to-purple-100 rounded-[2rem] p-6 transition-all duration-300 cursor-pointer border border-violet-100/60 group flex flex-col justify-between relative overflow-hidden hover:-translate-y-1 shadow-sm hover:shadow-violet-500/10">
+                            <div onclick="switchTab('inteligencia')" class="bg-gradient-to-br from-cyan-50 to-blue-50/80 hover:from-cyan-100 hover:to-blue-100 rounded-[2rem] p-6 transition-all duration-300 cursor-pointer border border-cyan-100/60 group flex flex-col justify-between relative overflow-hidden hover:-translate-y-1 shadow-sm hover:shadow-cyan-500/10">
                                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-0 group-hover:opacity-10 transition-opacity duration-500 mix-blend-multiply"></div>
                                 <div class="absolute right-0 bottom-0 opacity-5 transform translate-x-4 translate-y-4 z-0">
                                     <i data-lucide="brain" class="w-24 h-24"></i>
                                 </div>
                                 <div class="flex justify-between items-start relative z-10 mb-4">
-                                    <div class="bg-white/90 backdrop-blur-sm w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-500 text-violet-600">
+                                    <div class="bg-white/90 backdrop-blur-sm w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-500 text-blue-600">
                                         <i data-lucide="brain-circuit" class="w-7 h-7 stroke-[2.5px]"></i>
                                     </div>
-                                    <div class="bg-violet-200/50 p-2 rounded-full text-violet-700 group-hover:bg-white group-hover:shadow-sm transition-all animate-pulse border border-violet-300/50">
+                                    <div class="bg-cyan-200/50 p-2 rounded-full text-cyan-700 group-hover:bg-white group-hover:shadow-sm transition-all animate-pulse border border-cyan-300/50">
                                         <i data-lucide="sparkles" class="w-4 h-4"></i>
                                     </div>
                                 </div>
                                 <div class="relative z-10">
-                                    <span class="font-black text-violet-950 mb-1 block text-xl tracking-tight">Salud Fin.</span>
-                                    <span class="text-sm font-medium text-violet-800/70">Mide tu capacidad de ahorro.</span>
+                                    <span class="font-black text-blue-950 mb-1 block text-xl tracking-tight">Salud Fin.</span>
+                                    <span class="text-sm font-medium text-blue-800/70">Mide tu capacidad de ahorro.</span>
                                 </div>
                             </div>
                         </div>
@@ -249,7 +249,7 @@
                     <div class="lg:col-span-5 bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
                         <div class="flex items-center justify-between mb-8">
                             <h3 class="text-2xl font-black text-slate-800 tracking-tight flex items-center">
-                                <i data-lucide="target" class="mr-3 text-indigo-500 w-7 h-7"></i> Hábitos Diarios
+                                <i data-lucide="target" class="mr-3 text-blue-500 w-7 h-7"></i> Hábitos Diarios
                             </h3>
                         </div>
                         <p class="text-slate-500 font-medium mb-6 text-sm">Construye tu riqueza paso a paso marcando estas acciones.</p>
@@ -263,20 +263,20 @@
 
             <!-- ACADEMIA VIEW -->
             <div id="view-aprender" class="view-section animate-fade-in-up space-y-8 pb-10">
-                <div class="bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-[0_20px_50px_rgba(79,70,229,0.3)] relative overflow-hidden ring-1 ring-white/20 group">
+                <div class="bg-gradient-to-br from-emerald-800 via-teal-700 to-cyan-800 rounded-[2.5rem] p-8 md:p-12 text-white shadow-[0_20px_50px_rgba(16,185,129,0.3)] relative overflow-hidden ring-1 ring-white/20 group">
                     <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-luminosity"></div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/95 via-violet-900/80 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-900/90 via-teal-900/80 to-transparent"></div>
                     <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-white opacity-[0.05] rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
-                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-fuchsia-400 opacity-30 rounded-full blur-[80px]"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400 opacity-30 rounded-full blur-[80px]"></div>
                     
                     <div class="relative z-10 max-w-3xl">
-                        <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-violet-100 text-sm font-semibold mb-6 shadow-sm">
+                        <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-teal-100 text-sm font-semibold mb-6 shadow-sm">
                             <i data-lucide="book-open" class="w-4 h-4"></i> <span>Plan de Estudios Oficial</span>
                         </div>
                         <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tighter leading-tight">
-                            Tu Maestría en <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-200 to-fuchsia-200">Finanzas Personales</span>
+                            Tu Maestría en <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-cyan-200">Finanzas Personales</span>
                         </h2>
-                        <p class="text-violet-100/90 text-lg md:text-xl leading-relaxed font-medium">
+                        <p class="text-teal-100/90 text-lg md:text-xl leading-relaxed font-medium">
                             Explora los módulos diseñados para transformar tu mentalidad, enseñarte las reglas del juego y cuidar tus bolsillos de por vida.
                         </p>
                     </div>
@@ -417,9 +417,9 @@
                             <div class="pt-2">
                                 <label class="flex justify-between items-center text-xs font-black text-slate-500 uppercase tracking-widest mb-5">
                                     <span>Años de Inversión</span>
-                                    <span id="labelIntAnos" class="text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full border border-indigo-200 text-sm shadow-sm">15 años</span>
+                                    <span id="labelIntAnos" class="text-blue-700 bg-blue-100 px-3 py-1 rounded-full border border-blue-200 text-sm shadow-sm">15 años</span>
                                 </label>
-                                <input type="range" id="intAnos" min="1" max="40" value="15" class="w-full h-3 bg-slate-200 rounded-full appearance-none cursor-pointer custom-range indigo-range shadow-inner" />
+                                <input type="range" id="intAnos" min="1" max="40" value="15" class="w-full h-3 bg-slate-200 rounded-full appearance-none cursor-pointer custom-range blue-range shadow-inner" />
                             </div>
                         </div>
 
@@ -522,7 +522,7 @@
                     <div class="absolute top-0 right-0 w-full md:w-1/2 h-64 md:h-full opacity-15 pointer-events-none bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center [mask-image:linear-gradient(to_bottom,black,transparent)] md:[mask-image:linear-gradient(to_left,black,transparent)] transition-all duration-700 hover:opacity-25"></div>
                     
                     <div class="relative z-10 max-w-3xl mb-10">
-                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-violet-100 text-violet-600 mb-6 shadow-inner border border-violet-200/50">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-100 text-cyan-600 mb-6 shadow-inner border border-cyan-200/50">
                             <i data-lucide="brain-circuit" class="w-8 h-8 stroke-[2.5px]"></i>
                         </div>
                         <h2 class="text-4xl font-black text-slate-800 mb-4 tracking-tight">Salud Financiera (50/30/20)</h2>
@@ -541,7 +541,7 @@
                                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                         <span class="text-slate-400 font-black text-xl">$</span>
                                     </div>
-                                    <input type="number" id="intIngreso" value="4000000" class="pl-10 w-full rounded-2xl border-2 border-slate-200 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/20 bg-white py-3 px-4 font-black text-xl text-slate-800 outline-none transition-all shadow-sm" />
+                                    <input type="number" id="intIngreso" value="4000000" class="pl-10 w-full rounded-2xl border-2 border-slate-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/20 bg-white py-3 px-4 font-black text-xl text-slate-800 outline-none transition-all shadow-sm" />
                                 </div>
                             </div>
 
@@ -576,15 +576,15 @@
 
                         <div class="xl:col-span-7 flex flex-col gap-6 relative z-10">
                             <!-- Diagnostic Card -->
-                            <div id="diagnosticoCard" class="bg-gradient-to-br from-indigo-600 to-violet-700 p-8 rounded-[2rem] shadow-[0_15px_30px_rgba(99,102,241,0.3)] text-white relative overflow-hidden transition-all duration-500">
+                            <div id="diagnosticoCard" class="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-[2rem] shadow-[0_15px_30px_rgba(59,130,246,0.3)] text-white relative overflow-hidden transition-all duration-500">
                                 <div class="absolute top-0 right-0 w-40 h-40 bg-white opacity-20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
                                 <div class="flex justify-between items-start">
                                     <div>
-                                        <p class="text-xs font-black text-violet-200 uppercase tracking-widest mb-2 flex items-center">
+                                        <p class="text-xs font-black text-cyan-200 uppercase tracking-widest mb-2 flex items-center">
                                             <i data-lucide="activity" class="w-4 h-4 mr-2"></i> Diagnóstico en vivo
                                         </p>
                                         <h3 id="diagTitulo" class="text-2xl font-black mb-2">Excelente Equilibrio</h3>
-                                        <p id="diagTexto" class="text-violet-100 font-medium text-sm leading-relaxed max-w-md">Tus finanzas están alineadas con la regla del 50/30/20. Mantén este hábito para asegurar tu futuro.</p>
+                                        <p id="diagTexto" class="text-cyan-100 font-medium text-sm leading-relaxed max-w-md">Tus finanzas están alineadas con la regla del 50/30/20. Mantén este hábito para asegurar tu futuro.</p>
                                     </div>
                                     <div id="diagIcon" class="bg-white/20 p-4 rounded-full backdrop-blur-sm shadow-inner">
                                         <i data-lucide="award" class="w-8 h-8 text-white"></i>
@@ -634,6 +634,7 @@
 
     <!-- MAIN JAVASCRIPT LOGIC -->
     <script>
+        // --- STREAMING_CHUNK:Base de Datos de Conocimiento (Academia)... ---
         // --- DATA STATE ---
         const navItems = [
             { id: 'dashboard', icon: 'layout-grid', label: 'Inicio' },
@@ -757,9 +758,9 @@
             },
             {
                 categoria: "Módulo 4: Construcción de Riqueza",
-                iconoStr: '<i data-lucide="sparkles" class="w-7 h-7 text-indigo-500"></i>',
-                color: "text-indigo-700",
-                bgGradient: "from-indigo-50 to-blue-50",
+                iconoStr: '<i data-lucide="sparkles" class="w-7 h-7 text-blue-500"></i>',
+                color: "text-blue-700",
+                bgGradient: "from-blue-50 to-cyan-50",
                 lecciones: [
                     { 
                         id: 'c4_l1', 
@@ -800,7 +801,6 @@
         };
 
         const formatoMiles = (valor) => {
-            // Adaptado para mostrar Millones de COP correctamente
             if (Math.abs(valor) >= 1000000) {
                 return '$' + (valor / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
             }
@@ -816,14 +816,12 @@
             renderHabitos();
             renderAcademia();
             
-            // Init features calculation
             calcularHormiga();
             initCharts();
             calcularInteres();
             calcularCredito();
             calcularInteligencia();
 
-            // Set up Event Listeners for inputs
             setupInputListeners();
             
             lucide.createIcons();
@@ -847,11 +845,11 @@
                 dBtn.className = `flex items-center justify-center lg:justify-start p-4 rounded-2xl transition-all duration-300 group relative overflow-hidden ${isActive ? 'text-white shadow-md' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900 border border-transparent hover:border-slate-200'}`;
                 
                 if(isActive) {
-                    dBtn.innerHTML = `<div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-violet-600 opacity-100 z-0"></div>`;
+                    dBtn.innerHTML = `<div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-100 z-0"></div>`;
                 }
                 
                 dBtn.innerHTML += `
-                    <div class="${isActive ? 'transform scale-110 relative z-10 text-white' : 'group-hover:scale-110 group-hover:-rotate-3 text-slate-400 group-hover:text-indigo-600 relative z-10'} transition-all duration-300">
+                    <div class="${isActive ? 'transform scale-110 relative z-10 text-white' : 'group-hover:scale-110 group-hover:-rotate-3 text-slate-400 group-hover:text-blue-600 relative z-10'} transition-all duration-300">
                         <i data-lucide="${item.icon}" class="w-6 h-6"></i>
                     </div>
                     <span class="hidden lg:block font-bold text-[15px] ml-4 tracking-wide relative z-10">${item.label}</span>
@@ -865,7 +863,7 @@
                 mBtn.className = `flex flex-col items-center p-3 rounded-2xl transition-all duration-300 flex-1 relative overflow-hidden ${isActive ? 'text-white shadow-md' : 'text-slate-400'}`;
                 
                 if(isActive) {
-                    mBtn.innerHTML = `<div class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-violet-600 opacity-100 z-0"></div>`;
+                    mBtn.innerHTML = `<div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-500 opacity-100 z-0"></div>`;
                 }
 
                 mBtn.innerHTML += `
@@ -882,18 +880,14 @@
         function switchTab(tabId) {
             currentTab = tabId;
             
-            // Update Title
             const titleElement = document.getElementById('page-title');
             if(titleElement) titleElement.textContent = navItems.find(i => i.id === tabId).label;
 
-            // Hide all views, show active
             document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
             document.getElementById(`view-${tabId}`).classList.add('active');
 
-            // Re-render navs
             renderNavigation();
 
-            // Refresh charts if needed (Chart.js sometimes needs a resize trigger if rendered while hidden)
             if(tabId === 'interes' && interesChartInstance) interesChartInstance.resize();
             if(tabId === 'credito' && creditoChartInstance) creditoChartInstance.resize();
             if(tabId === 'inteligencia' && inteligenciaChartInstance) inteligenciaChartInstance.resize();
@@ -906,14 +900,14 @@
             
             habitos.forEach(habito => {
                 const div = document.createElement('div');
-                div.className = `flex items-center p-4 rounded-2xl transition-all duration-300 cursor-pointer group border ${habito.completado ? 'bg-indigo-50/70 border-indigo-200 shadow-sm' : 'bg-slate-50/50 border-slate-200 hover:border-indigo-300 hover:bg-white hover:shadow-md'}`;
+                div.className = `flex items-center p-4 rounded-2xl transition-all duration-300 cursor-pointer group border ${habito.completado ? 'bg-blue-50/70 border-blue-200 shadow-sm' : 'bg-slate-50/50 border-slate-200 hover:border-blue-300 hover:bg-white hover:shadow-md'}`;
                 div.onclick = () => toggleHabito(habito.id);
                 
                 div.innerHTML = `
-                    <div class="mr-4 w-6 h-6 rounded-full flex items-center justify-center border-2 transition-all duration-300 flex-shrink-0 ${habito.completado ? 'bg-indigo-500 border-indigo-500 shadow-sm' : 'border-slate-300 group-hover:border-indigo-400'}">
+                    <div class="mr-4 w-6 h-6 rounded-full flex items-center justify-center border-2 transition-all duration-300 flex-shrink-0 ${habito.completado ? 'bg-blue-500 border-blue-500 shadow-sm' : 'border-slate-300 group-hover:border-blue-400'}">
                         ${habito.completado ? '<i data-lucide="check-circle-2" class="text-white w-4 h-4 stroke-[3px]"></i>' : ''}
                     </div>
-                    <span class="text-[15px] font-bold transition-all duration-300 ${habito.completado ? 'text-indigo-900/50 line-through' : 'text-slate-700'}">
+                    <span class="text-[15px] font-bold transition-all duration-300 ${habito.completado ? 'text-blue-900/50 line-through' : 'text-slate-700'}">
                         ${habito.titulo}
                     </span>
                 `;
@@ -935,10 +929,10 @@
             container.innerHTML = '';
 
             const unsplashImages = [
-                "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&w=800&q=80", // Criptos/Oro/Psicología
-                "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80", // Tarjetas/Deudas
-                "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80", // Billetes/Ahorro
-                "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"  // Gráficos/Riqueza
+                "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
             ];
 
             baseConocimiento.forEach((modulo, mIdx) => {
@@ -947,7 +941,6 @@
                 
                 const bgImg = unsplashImages[mIdx % unsplashImages.length];
 
-                // Header Modulo
                 let html = `
                     <div class="relative bg-gradient-to-br ${modulo.bgGradient} p-6 md:p-8 rounded-[2rem] border border-white/60 mb-2 overflow-hidden group shadow-sm">
                         <div class="absolute inset-0 bg-[url('${bgImg}')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-700 mix-blend-overlay"></div>
@@ -961,15 +954,13 @@
                     <div class="px-2 md:px-4 py-4 space-y-4">
                 `;
 
-                // Lecciones
                 modulo.lecciones.forEach((leccion) => {
                     const isExpanded = expandedModule === leccion.id;
                     
-                    // Format content (Teoría base)
                     const contenidoFormateado = leccion.contenido.split('\n').map(paragraph => {
                         if (!paragraph) return '';
                         if (paragraph.startsWith('•') || paragraph.startsWith('1.') || paragraph.startsWith('2.') || paragraph.startsWith('3.')) {
-                            return `<p class="pl-4 border-l-4 border-indigo-300 py-1 my-2 bg-slate-50/80 rounded-r-lg">${paragraph}</p>`;
+                            return `<p class="pl-4 border-l-4 border-blue-300 py-1 my-2 bg-slate-50/80 rounded-r-lg">${paragraph}</p>`;
                         } else if (paragraph.includes(':') && paragraph.length < 50) {
                             return `<h5 class="font-black text-slate-800 mt-6 mb-2 text-lg">${paragraph}</h5>`;
                         } else {
@@ -977,7 +968,6 @@
                         }
                     }).join('');
 
-                    // UI Interactivo: Chat
                     let chatHTML = '';
                     if (leccion.chat) {
                         chatHTML = `<div class="mt-8 p-6 bg-slate-50 rounded-3xl border border-slate-200 shadow-inner space-y-4">
@@ -988,7 +978,7 @@
                             if(msg.sender === 'mentor') {
                                 chatHTML += `
                                     <div class="flex items-start gap-3 w-11/12 md:w-5/6">
-                                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 text-indigo-600 border border-indigo-200 shadow-sm">
+                                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-600 border border-blue-200 shadow-sm">
                                             <i data-lucide="graduation-cap" class="w-4 h-4"></i>
                                         </div>
                                         <div class="bg-white p-4 rounded-2xl rounded-tl-sm shadow-md border border-slate-100 text-[15px] text-slate-700">
@@ -1012,7 +1002,6 @@
                         chatHTML += `</div>`;
                     }
 
-                    // UI Interactivo: Ejemplo Destacado
                     let ejemploHTML = '';
                     if (leccion.ejemplo) {
                         ejemploHTML = `
@@ -1027,13 +1016,12 @@
                         `;
                     }
 
-                    // UI Interactivo: Caso Práctico (Quiz)
                     let casoHTML = '';
                     if (leccion.casoPractico) {
                         casoHTML = `
-                            <div class="mt-8 bg-indigo-50/50 p-6 md:p-8 rounded-3xl border border-indigo-100 relative overflow-hidden shadow-sm">
-                                <div class="absolute top-0 right-0 w-40 h-40 bg-indigo-200 opacity-30 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-                                <div class="flex items-center space-x-2 mb-4 text-indigo-500 font-black text-xs uppercase tracking-widest relative z-10">
+                            <div class="mt-8 bg-blue-50/50 p-6 md:p-8 rounded-3xl border border-blue-100 relative overflow-hidden shadow-sm">
+                                <div class="absolute top-0 right-0 w-40 h-40 bg-cyan-200 opacity-30 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                                <div class="flex items-center space-x-2 mb-4 text-blue-500 font-black text-xs uppercase tracking-widest relative z-10">
                                     <i data-lucide="target" class="w-4 h-4"></i> <span>Reto de Decisión</span>
                                 </div>
                                 <p class="text-lg font-bold text-slate-800 mb-6 relative z-10 leading-snug">
@@ -1041,8 +1029,8 @@
                                 </p>
                                 <div class="space-y-3 relative z-10" id="quiz-${leccion.id}">
                                     ${leccion.casoPractico.opciones.map((opc, idx) => `
-                                        <button onclick="resolverCaso(this, ${opc.correcto}, \`${opc.feedback.replace(/'/g, "\\'")}\`)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 transition-all font-medium text-slate-600 flex items-center gap-3 group shadow-sm hover:shadow-md">
-                                            <div class="w-6 h-6 rounded-full border-2 border-slate-300 group-hover:border-indigo-400 flex items-center justify-center flex-shrink-0 transition-colors"></div>
+                                        <button onclick="resolverCaso(this, ${opc.correcto}, \`${opc.feedback.replace(/'/g, "\\'")}\`)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50 transition-all font-medium text-slate-600 flex items-center gap-3 group shadow-sm hover:shadow-md">
+                                            <div class="w-6 h-6 rounded-full border-2 border-slate-300 group-hover:border-blue-400 flex items-center justify-center flex-shrink-0 transition-colors"></div>
                                             <span>${opc.texto}</span>
                                         </button>
                                     `).join('')}
@@ -1053,21 +1041,21 @@
                     }
 
                     html += `
-                        <div class="accordion-item ${isExpanded ? 'expanded' : ''} group rounded-[2rem] border-2 transition-all duration-500 overflow-hidden ${isExpanded ? 'bg-white border-indigo-300 shadow-[0_10px_40px_rgba(99,102,241,0.1)]' : 'bg-slate-50/80 border-transparent hover:bg-white hover:border-slate-200 hover:shadow-lg'}">
+                        <div class="accordion-item ${isExpanded ? 'expanded' : ''} group rounded-[2rem] border-2 transition-all duration-500 overflow-hidden ${isExpanded ? 'bg-white border-blue-300 shadow-[0_10px_40px_rgba(59,130,246,0.1)]' : 'bg-slate-50/80 border-transparent hover:bg-white hover:border-slate-200 hover:shadow-lg'}">
                             <div class="p-6 md:p-8 cursor-pointer" onclick="toggleAccordion('${leccion.id}')">
                                 <div class="flex justify-between items-start gap-4">
                                     <div class="flex-1">
                                         <div class="flex items-center space-x-3 mb-2">
-                                            <span class="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full ${isExpanded ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600 group-hover:bg-indigo-50 group-hover:text-indigo-600'} transition-colors shadow-sm">Lección</span>
+                                            <span class="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full ${isExpanded ? 'bg-blue-100 text-blue-700' : 'bg-slate-200 text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-600'} transition-colors shadow-sm">Lección</span>
                                         </div>
-                                        <h4 class="text-xl md:text-2xl font-black mb-1 tracking-tight transition-colors ${isExpanded ? 'text-indigo-950' : 'text-slate-800 group-hover:text-indigo-700'}">
+                                        <h4 class="text-xl md:text-2xl font-black mb-1 tracking-tight transition-colors ${isExpanded ? 'text-blue-950' : 'text-slate-800 group-hover:text-blue-700'}">
                                             ${leccion.titulo}
                                         </h4>
                                         <p class="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
                                             ${leccion.descripcion}
                                         </p>
                                     </div>
-                                    <div class="flex-shrink-0 p-3 rounded-2xl transition-all duration-500 ${isExpanded ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/30 rotate-180' : 'bg-white border border-slate-200 text-slate-400 shadow-sm group-hover:bg-indigo-50 group-hover:text-indigo-600 group-hover:border-indigo-200'}">
+                                    <div class="flex-shrink-0 p-3 rounded-2xl transition-all duration-500 ${isExpanded ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30 rotate-180' : 'bg-white border border-slate-200 text-slate-400 shadow-sm group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200'}">
                                         <i data-lucide="chevron-down" class="w-6 h-6 stroke-[2.5px]"></i>
                                     </div>
                                 </div>
@@ -1079,7 +1067,6 @@
                                         ${contenidoFormateado}
                                     </div>
                                     
-                                    <!-- Componentes Interactivos -->
                                     ${ejemploHTML}
                                     ${chatHTML}
                                     ${casoHTML}
@@ -1096,18 +1083,15 @@
             lucide.createIcons();
         }
 
-        // Lógica para resolver los casos prácticos (Quizzes)
         window.resolverCaso = function(btnElement, esCorrecto, feedbackTexto) {
             const parent = btnElement.parentElement;
             
-            // Deshabilitar todos los botones hermanos
             Array.from(parent.children).forEach(child => {
                 child.disabled = true;
                 child.classList.add('opacity-50', 'cursor-not-allowed', 'hover:border-slate-200', 'hover:bg-white', 'shadow-none');
-                child.classList.remove('hover:border-indigo-400', 'hover:bg-indigo-50', 'hover:shadow-md');
+                child.classList.remove('hover:border-blue-400', 'hover:bg-blue-50', 'hover:shadow-md');
             });
 
-            // Resaltar el botón clickeado
             btnElement.classList.remove('opacity-50', 'bg-white', 'border-slate-200');
             const iconDiv = btnElement.querySelector('div');
             
@@ -1121,7 +1105,6 @@
                 iconDiv.innerHTML = '<i data-lucide="x" class="w-4 h-4"></i>';
             }
 
-            // Mostrar el feedback animado
             const feedbackContainer = parent.nextElementSibling;
             feedbackContainer.innerHTML = `
                 <div class="mt-6 p-5 rounded-2xl ${esCorrecto ? 'bg-emerald-100/80 text-emerald-900 border border-emerald-300' : 'bg-rose-100/80 text-rose-900 border border-rose-300'} flex gap-4 animate-fade-in-up shadow-sm backdrop-blur-sm">
@@ -1159,7 +1142,6 @@
             document.getElementById('resFugaAnual').innerText = formatoMoneda(gastoAnual);
             document.getElementById('resFugaInversion').innerText = formatoMoneda(inversionA5Anos);
 
-            // Update icons based on value relative to COP
             const iCoffee = document.getElementById('iconCoffee');
             const iBag = document.getElementById('iconBag');
             const iPhone = document.getElementById('iconPhone');
@@ -1171,21 +1153,17 @@
 
         // --- SETUP INPUT LISTENERS ---
         function setupInputListeners() {
-            // Hormiga
             document.getElementById('gastoDiario').addEventListener('input', calcularHormiga);
             document.getElementById('frecuenciaSemanal').addEventListener('input', calcularHormiga);
 
-            // Interes
             ['intCapital', 'intAporte', 'intTasa', 'intAnos'].forEach(id => {
                 document.getElementById(id).addEventListener('input', calcularInteres);
             });
 
-            // Credito
             ['credMonto', 'credTasa', 'credPlazo'].forEach(id => {
                 document.getElementById(id).addEventListener('input', calcularCredito);
             });
 
-            // Inteligencia (Salud Financiera)
             ['intIngreso', 'intFijos', 'intFlexibles'].forEach(id => {
                 document.getElementById(id).addEventListener('input', calcularInteligencia);
             });
@@ -1194,7 +1172,6 @@
         // --- STREAMING_CHUNK:Inicialización y Configuración de Gráficos (Chart.js)... ---
         // --- CHARTS INITIALIZATION ---
         function initCharts() {
-            // Configurar defaults globales para Chart.js
             Chart.defaults.font.family = "'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif";
             Chart.defaults.color = '#64748b';
 
@@ -1484,8 +1461,6 @@
 
             document.getElementById('labelIntFijos').innerText = pFijos.toFixed(1) + '%';
             document.getElementById('labelIntFlexibles').innerText = pFlex.toFixed(1) + '%';
-            
-            // Format for UI showing 'k' or 'M' for readability
             document.getElementById('resIntAhorroValor').innerText = formatoMiles(ahorro);
             
             const chartCenter = document.getElementById('centerChartAhorro');
@@ -1523,7 +1498,7 @@
                 texto.innerText = "Tus finanzas están perfectamente alineadas con la regla del 50/30/20. Estás construyendo verdadera riqueza. ¡Sigue invirtiendo ese 20%!";
                 icon.innerHTML = '<i data-lucide="shield-check" class="w-8 h-8 text-white"></i>';
             } else if (pAhorro > 0 && pAhorro < 20) {
-                card.className = "bg-gradient-to-br from-indigo-500 to-violet-700 p-8 rounded-[2rem] shadow-[0_15px_30px_rgba(99,102,241,0.3)] text-white relative overflow-hidden transition-all duration-500 border border-indigo-400";
+                card.className = "bg-gradient-to-br from-blue-500 to-cyan-600 p-8 rounded-[2rem] shadow-[0_15px_30px_rgba(59,130,246,0.3)] text-white relative overflow-hidden transition-all duration-500 border border-blue-400";
                 titulo.innerText = "Vas por buen camino";
                 texto.innerText = "Logras ahorrar algo de dinero al mes, lo cual es positivo, pero no estás llegando al 20% ideal. Recorta algunos 'Deseos' para acelerar tus metas.";
                 icon.innerHTML = '<i data-lucide="trending-up" class="w-8 h-8 text-white"></i>';
